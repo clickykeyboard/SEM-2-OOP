@@ -1,29 +1,32 @@
+# toota hua program hai, agar kisi ko solution bta bta dena
+
 class Number:
 
     def __init__(self, limit):
         self.value = 0
         self.limit = limit
-    
+
     def get_value(self):
         return self.value
-    
+
     def get_limit(self):
         return self.limit
 
     def set_value(self, value):
         if value <= 60:
-            self.value = value 
+            self.value = value
         else:
             print("Error")
 
     def set_limit(self, limit):
         if limit < 24:
-            self.limit = limit 
+            self.limit = limit
         else:
             print("Error")
-    
+
     def update(self):
         self.value += 1
+
 
 class Clock:
 
@@ -33,19 +36,20 @@ class Clock:
         self.time = ""
         self.day_time = False
         self.cycle = 0
-    
+
     def print_time(self):
         print(self.time)
 
     def update_time(self):
-        self.time = self.add_value(self.hours.get_value()) + ":" + self.add_value(self.minutes.get_value())
+        self.time = self.add_value(self.hours.get_value(
+        )) + ":" + self.add_value(self.minutes.get_value())
         self.time += " " + str()
 
     def add_value(self, value):
         self.value = value
         if self.value < 10:
             return "0" + str(self.value)
-            
+
         return str(self.value)
 
     def time_tick(self):
@@ -59,8 +63,8 @@ class Clock:
                 self.cycle += 1
                 self.day_time = not self.day_time
 
-    
         self.update_time()
+
 
 clock = Clock("PM")
 clock.hours.set_value(0)
