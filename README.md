@@ -1,3 +1,3 @@
 # SEM-2-OOP
-mein har lecture pe udpate karun ga (agar mujhe kuch ata hua)
+mein har lecture OOP ke lecture pe update karun ga (agar mujhe kuch ata hua to 😂)
 - badr
