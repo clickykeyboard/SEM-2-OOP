@@ -2,9 +2,8 @@ class Main {
 
     public static void main(String[] args) {
 
-        Person person = new Person("Badr", 20);
-
-        System.out.println(person.getName());
+        Number hours = new Number(60);
+        System.out.println(hours.getLimit());
          
     }
 
