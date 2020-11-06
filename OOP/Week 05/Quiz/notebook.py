@@ -1,12 +1,13 @@
 from datetime import date, datetime
 
+
 class Notebook:
 
     def __init__(self, name):
         self.name = name
         self.pages = 0
         self.notes = []
-    
+
     def get_author(self):
         return self.name
 
@@ -29,6 +30,7 @@ class Notebook:
 
     def get_notes(self):
         return self.notes
+
 
 class Note:
 
@@ -56,8 +58,5 @@ page3 = notebook.make_new_note("Notebook page 3")
 print("Number of notebook pages: ", notebook.get_pages())
 
 for note in notebook.get_notes():
-    print(note.get_note_text())
-
-
-
-     
+    print("Page:", note.get_note_page_number(), "\nTime: ",
+          note.get_note_time(), "\nNote:", note.get_note_text())
