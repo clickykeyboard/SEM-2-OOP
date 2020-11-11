@@ -1,50 +1,43 @@
 import cd
 import video
 
-
 class Database:
 
     def __init__(self):
-        self.cds = []
-        self.dvds = []
+        self.cds_and_dvds = []
 
-    def add_cd(self):
+    def add(self, name):
+
         title = input("Enter title: ")
-        artist = input("Enter artist: ")
-        tracks = int(input("Enter tracks: "))
+        if name == "cd":
+            artist = input("Enter artist: ") 
+        else:
+            director = input("Enter director: ")
+        if name == "cd":
+            tracks = int(input("Enter tracks: "))
+        
         playtime = int(input("Enter playtime: "))
+        comment = input("Enter comment 1: ")
+        comment1 = input("Enter comment 2: ")
+        comment2 = input("Enter comment 3: ")
+        owned = bool(input("Do you own the CD/DVD?: (True/False)"))
 
-        cd1 = cd.CD(title, artist, tracks, playtime)
-        self.cds.append(cd1)
+        if name == "cd":
+            obj = cd.CD(title, artist, tracks, playtime)
+        else:
+            obj = video.Video(title, director, playtime)
 
-    def add_video(self):
-        title = input("Enter title: ")
-        director = input("Enter director: ")
-        playtime = int(input("Enter playtime: "))
+        obj.set_comments([comment, comment1, comment2])
+        obj.set_owned(owned)
+        self.cds_and_dvds.append(obj)
 
-        video1 = video.Video(title, director, playtime)
-        self.dvds.append(video1)
-
-    def print_cd(self, i):
-        self.cds[i].print()
-
-    def print_dvd(self, i):
-        self.dvds[i].print()
-
-    def all_cds(self):
-        for cd in self.cds:
-            print(cd.print())
+    def all_cds_and_dvds(self):
+        for cd_dvd in self.cds_and_dvds:
+            print(cd_dvd.print())
             print("--------")
-
-    def all_dvds(self):
-        for dvd in self.dvds:
-            print(dvd.print())
-            print("--------")
-
 
 database = Database()
-database.add_cd()
-database.add_video()
+database.add("cd")
+database.add("video")
 
-database.all_cds()
-database.all_dvds()
+database.all_cds_and_dvds()
