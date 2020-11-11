@@ -27,4 +27,4 @@ class Video:
         print("Director name:", self.director)
         print("Playtime:", self.playing_time)
         print("Owned: ", self.owned)
-        print("Comments: ", self.comments
+        print("Comments: ", self.comments)
