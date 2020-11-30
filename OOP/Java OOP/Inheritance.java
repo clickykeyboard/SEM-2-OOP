@@ -8,8 +8,14 @@ class SuperClass {
         System.out.println("Printing superClassMethod!");
     }
 
+    public void printBaseClassVariable() {
+        System.out.println(this.baseClassVariable);
+    }
+
 }
 
 class BaseClass extends SuperClass {
+
+    private String baseClassVariable; 
 
 }
