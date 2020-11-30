@@ -9,7 +9,7 @@ class SuperClass {
     }
 
     public void printBaseClassVariable() {
-        System.out.println(this.baseClassVariable);
+        System.out.println("");
     }
 
 }
