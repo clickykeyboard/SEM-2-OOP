@@ -16,6 +16,6 @@ class SuperClass {
 
 class BaseClass extends SuperClass {
 
-    private String baseClassVariable; 
+    // private String baseClassVariable; 
 
 }
