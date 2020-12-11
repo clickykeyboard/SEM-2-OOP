@@ -1,4 +1,4 @@
-package Task;
+package Task01;
 
 class HospitalManagementSystem {
 
