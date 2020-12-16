@@ -1,5 +1,8 @@
+import java.io.File;
+
 class Main {
     public static void main(String args[]) {
-        FileHandling.createFile();
+        File file = FileHandling.createFile();
+        FileHandling.readFile(file);
     }
 }
