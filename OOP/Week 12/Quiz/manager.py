@@ -8,7 +8,7 @@ class Manager(Library):
     def __init__(self):
 
         self.choices = [1, 2]
-        super().__init__()
+        self.__init__()
 
     def run_menu(self):
         while True:
@@ -31,12 +31,12 @@ Welcome to the Library
                 print("\nBorrowing a book...")
                 patron_name = input("Enter your name: ")
                 patron = Patron(patron_name)
-                super().add_patron(patron)
+                self.add_patron(patron)
 
                 book_name = input("Enter book name: ")
                 book_author = input("Enter book author: ")
 
-                for book in super().get_books():
+                for book in self.get_books():
                     if book.is_checked_out():
                         print("Book already checked out")
                         print("Adding to waitlist...")
@@ -44,7 +44,7 @@ Welcome to the Library
                         break
 
                 book = Book(book_name, book_author)
-                super().add_book(book)
+                self.add_book(book)
 
                 print(
                     f"-----\n"
@@ -57,10 +57,10 @@ Welcome to the Library
                 patron_name = input("Enter your name: ")
                 book_name = input("Enter book name: ")
 
-                for patron in super().get_patrons():
+                for patron in self.get_patrons():
                     if patron.get_name() == patron_name:
 
-                        for book in super().get_books():
+                        for book in self.get_books():
                             if book.get_book_name() == book_name:
                                 patron.return_book(book)
                                 print("Book returned successfully")
