@@ -1,16 +1,19 @@
+
+// SQL Import
 import java.sql.*;
 
+// Java GUI Imports
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class MyDB {
+class DatabaseGUI {
 
     // Database
-    public static String databaseURL = "jdbc:ucanaccess://C:/Users/ADMIN/Desktop/OOP/OOP/Week 16/Assignment/V2/MyDB.accdb";
+    public String databaseURL = "jdbc:ucanaccess://Database.accdb";
     public Connection connection;
 
-    public static int dataLength;
+    public int dataLength;
 
     // GUI
     public JFrame frame;
@@ -23,7 +26,7 @@ class MyDB {
 
     public void setGUI() {
 
-        frame = new JFrame("My Database");
+        frame = new JFrame("Database GUI");
         JPanel mainFrame = new JPanel(new GridLayout(3, 1));
         frame.getContentPane().add(mainFrame);
 
@@ -121,7 +124,7 @@ class MyDB {
 
     public static void main(String args[]) {
 
-        MyDB myDB = new MyDB();
+        DatabaseGUI myDB = new DatabaseGUI();
 
         myDB.setGUI();
         myDB.setDatabase();

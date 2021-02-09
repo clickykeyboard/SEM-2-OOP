@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ADMIN\\Desktop\\OOP\\OOP\\Week 16\\Java2DB\\libraries\\commons-lang3-3.8.1.jar",
+        "c:\\Users\\ADMIN\\Desktop\\OOP\\OOP\\Week 16\\Java2DB\\libraries\\commons-logging-1.2.jar",
+        "c:\\Users\\ADMIN\\Desktop\\OOP\\OOP\\Week 16\\Java2DB\\libraries\\hsqldb-2.5.0.jar",
+        "c:\\Users\\ADMIN\\Desktop\\OOP\\OOP\\Week 16\\Java2DB\\libraries\\jackcess-3.0.1.jar",
+        "c:\\Users\\ADMIN\\Desktop\\OOP\\OOP\\Week 16\\Java2DB\\libraries\\ucanaccess-5.0.1.jar"
+    ]
+}

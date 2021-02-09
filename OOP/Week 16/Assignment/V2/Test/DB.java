@@ -8,7 +8,7 @@ class DB {
     static Connection connection;
     static JFrame frame;
     static JTextField namefield;
-    static String dbURL = "jdbc:ucanaccess://C:/Users/ADMIN/Desktop/OOP/OOP/Week 16/Assignment/V2/Test/MyDB.accdb";
+    static String dbURL = "jdbc:ucanaccess://";
     static JTextField emailfield;
     static JTextField contactfield;
 
